@@ -1,0 +1,40 @@
+{
+  "public/sm/bundle.js": {
+    "bundled": 127361,
+    "minified": 32765,
+    "gzipped": 10148,
+    "treeshaked": {
+      "rollup": {
+        "code": 26920,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 35018
+      }
+    }
+  },
+  "public/sl/bundle.js": {
+    "bundled": 135991,
+    "minified": 29708,
+    "gzipped": 9837
+  },
+  "sl/bundle.js": {
+    "bundled": 135991,
+    "minified": 29708,
+    "gzipped": 9837
+  },
+  "sm/bundle.js": {
+    "bundled": 127361,
+    "minified": 32765,
+    "gzipped": 10148,
+    "treeshaked": {
+      "rollup": {
+        "code": 26920,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 35018
+      }
+    }
+  }
+}

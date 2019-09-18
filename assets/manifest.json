@@ -1,0 +1,21 @@
+{
+  "name": "Dream Config",
+  "short_name": "Dream Config",
+  "description": "A fast, small, performant starting place.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "icons": [
+    {
+      "src": "images/manifest/icon-192x192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/manifest/icon-512x512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
