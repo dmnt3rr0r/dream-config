@@ -1,13 +1,35 @@
-const { src, dest, parallel, task } = require('gulp');
-const { exec } = require('child_process');
+const { watch, src, dest, parallel, series } = require('gulp');
+const del = require('del');
 
-// TODO: run in parallel: [rollup, copy assets, /* postcss */ ]
-// TODO: run b4 build: rimraf
+const browserSync = require('browser-sync').create();
+
 // TODO: watch individually and only build what has changed
 // TODO: run browser-sync on the build folder
 
 const { rollupTask } = require('./gulp/rollup.js');
 
+function clean() {
+  return del([
+    'public/**/*'
+  ]);
+}
 
-task('default', rollupTask);
+function copyAssets() {
+  return src('assets/**/*').pipe(dest('public/'));
+}
 
+function serve() {
+
+  browserSync.init({
+    server: './public'
+  });
+
+  watch('src/**/*.js', rollupTask);
+  watch('assets/**/*', copyAssets);
+}
+
+exports.build = parallel(rollupTask, copyAssets);
+exports.serve = serve;
+
+
+exports.default = series(clean, exports.build); 

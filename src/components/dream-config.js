@@ -9,9 +9,6 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 import { store } from '../store.js';
 
 class DreamConfig extends connect(store)(LitElement) {
-  static get properties() {
-    appTitle: { type: String }
-  };
 
   static get styles() {
     return [
@@ -22,6 +19,7 @@ class DreamConfig extends connect(store)(LitElement) {
           align-items: center;
 
           font-size: 32pt;
+          color: purple;
         }
       `
     ];

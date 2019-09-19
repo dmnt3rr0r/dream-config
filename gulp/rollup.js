@@ -30,7 +30,7 @@ function genTask(input, envName, file, format) {
           ...commonPlugins
         ]}, { file, format }))
       .pipe(sourcemaps.write(''))
-      .pipe(dest('public/' + envName));
+      .pipe(dest('public/js/' + envName));
   };
 }
 
