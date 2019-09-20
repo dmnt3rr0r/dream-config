@@ -19,6 +19,8 @@
     "browser-sync": "^2.26.7",
     "core-js": "3",
     "del": "^5.1.0",
+    "flow-bin": "^0.108.0",
+    "flow-typed": "^2.6.1",
     "gulp": "^4.0.2",
     "gulp-better-rollup": "^4.0.1",
     "gulp-hub": "^4.2.0",
