@@ -18,14 +18,19 @@ function copyAssets() {
   return src('assets/**/*').pipe(dest('public/'));
 }
 
+function reload(cb) {
+  browserSync.reload();
+  cb();
+}
+
 function serve() {
 
   browserSync.init({
     server: './public'
   });
 
-  watch('src/**/*.js', rollupTask);
-  watch('assets/**/*', copyAssets);
+  watch('src/**/*.js', series(rollupTask, reload));
+  watch('assets/**/*', series(copyAssets, reload));
 }
 
 exports.build = parallel(rollupTask, copyAssets);

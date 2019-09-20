@@ -19,7 +19,7 @@ class DreamConfig extends connect(store)(LitElement) {
           align-items: center;
 
           font-size: 32pt;
-          color: purple;
+          color: green;
         }
       `
     ];
