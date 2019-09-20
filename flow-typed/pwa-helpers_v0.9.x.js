@@ -20,11 +20,9 @@ declare export function installRouter(locationUpdatedCallback: (location:Locatio
 
 /* lazyReducer */
 import type { ReducersMapObject, StoreEnhancer, combineReducers } from 'redux';
-declare export interface LazyStore {
-  addReducers: (newReducers: ReducersMapObject) => void
+
+export interface LazyStore {
+  addReducers: (newReducers: ReducersMapObject) => void;
 }
-declare export function lazyReducerEnhancer(combineReducers: typeof combineReducers)
 
-
-
-
+declare export function lazyReducerEnhancer(combiR: combineReducers): void;
