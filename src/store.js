@@ -16,6 +16,9 @@ import type { LazyStore } from 'pwa-helpers/lazy-reducer-enhancer.js';
 // See https://github.com/zalmoxisus/redux-devtools-extension for more information.
 const devCompose = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+// To make this your own, just import and add the types from
+// your reducers and then set up the state object. You can then 
+// replace all the 'Dream' with whatever you would like.
 export type DreamState = {
   ...
 };
